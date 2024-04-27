@@ -1,0 +1,70 @@
+body {
+    font-family: "Sedan", sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.wrapper > * {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    flex: 1 100%;
+}
+header {
+    background: rgb(224, 33, 15);
+    height: 150px;
+}
+.nav {
+    background: rgb(231, 212, 70);
+    height: 80px;
+}
+.footer {
+    background: rgb(224, 33, 15);
+    height: 80px;
+}
+.main {
+    background: rgb(249, 249, 55);
+    height: 300px;
+    padding: 40px;
+    font-size: 20;
+    text-align: vertical;
+}
+.aside1 {
+    background: rgb(231, 212, 70);
+    display: inline-block; /* Ensure container adjusts to content */
+    padding: 10px;
+}
+
+.aside1 img {
+    max-width: 100%; /* Make image responsive */
+    height: 350px; /* Maintain aspect ratio */
+}
+
+p {
+    text-align: left;
+}
+
+
+/* tampilan rtesponsive */
+@media all and (min-width: 80px) {
+    .main {
+        flex: 2;
+    }
+    .aside1 {
+        order: 2;
+    }
+    .main {
+        order: 1;
+    }
+    .footer {
+        order: 4;
+    }
+}
+@media all and (min-width: 600px){
+    .aside1 {
+        flex: 1;
+    }
+}
